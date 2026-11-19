@@ -1,0 +1,15 @@
+name = "jsp000881"
+version = "0.1.0"
+defaultTargets = ["Jsp000881"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.33.0"
+
+[[require]]
+name = "prime_uniformity"
+path = "../prime-uniformity"
+
+[[lean_lib]]
+name = "Jsp000881"

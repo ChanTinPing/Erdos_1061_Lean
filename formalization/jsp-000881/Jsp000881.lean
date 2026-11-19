@@ -1,0 +1,35 @@
+module
+
+public import Jsp000881.ModelTransfer
+import all Jsp000881.ModelTransfer
+public import Jsp000881.Products
+import all Jsp000881.Products
+public import Jsp000881.ResidueRectangles
+import all Jsp000881.ResidueRectangles
+public import Jsp000881.Bonferroni
+import all Jsp000881.Bonferroni
+public import Jsp000881.CRTIntersection
+import all Jsp000881.CRTIntersection
+public import Jsp000881.CramerMass
+import all Jsp000881.CramerMass
+public import Jsp000881.GowersFourier
+import all Jsp000881.GowersFourier
+public import Jsp000881.ModularDirections
+import all Jsp000881.ModularDirections
+public import Jsp000881.CramerDecay
+import all Jsp000881.CramerDecay
+public import Jsp000881.CramerNormalization
+import all Jsp000881.CramerNormalization
+public import Jsp000881.PrimeInput
+import all Jsp000881.PrimeInput
+public import Jsp000881.AmbientPrime
+import all Jsp000881.AmbientPrime
+public import Jsp000881.PrimeTriangle
+import all Jsp000881.PrimeTriangle
+public import Jsp000881.CubeLift
+import all Jsp000881.CubeLift
+public import Jsp000881.TriangleInterval
+import all Jsp000881.TriangleInterval
+public import Jsp000881.PrimeReduction
+import all Jsp000881.PrimeReduction
+public import Jsp000881.InverseReduction
