@@ -50,14 +50,14 @@ $proofBuild = Join-Path $PSScriptRoot 'formalization/prime-uniformity/compat/Bui
 Invoke-Checked pwsh -NoProfile -File $proofBuild -ProjectRoot $PSScriptRoot `
   -UpstreamLeanPath $upstreamLeanPath 2>&1 | Tee-Object -FilePath $logPath
 
-$audit = @(Get-Content -LiteralPath $logPath | Where-Object {
-  $_ -cmatch "^'Jsp000881\.not_linear_asymptotic' depends on axioms:"
-})
+$target = 'Jsp000881.erdos_1061'
+$prefix = "'$target' depends on axioms:"
+$audit = @(Get-Content -LiteralPath $logPath | Where-Object { $_.StartsWith($prefix, [StringComparison]::Ordinal) })
 if ($audit.Count -ne 1 -or $audit[0] -cnotmatch '\[([^\]]*)\]\s*$') {
-  throw 'Could not read the axiom audit for Jsp000881.not_linear_asymptotic'
+  throw "Could not read the axiom audit for $target"
 }
 $axioms = $Matches[1] -split ',\s*'
 $unexpected = $axioms | Where-Object { $_ -cnotin @('propext', 'Classical.choice', 'Quot.sound') }
 if ($unexpected) { throw "Unexpected axioms in the final proof: $($unexpected -join ', ')" }
 
-Write-Output 'Verified Jsp000881.not_linear_asymptotic with only standard Lean axioms.'
+Write-Output "Verified $target with only standard Lean axioms."

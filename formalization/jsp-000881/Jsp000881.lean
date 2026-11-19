@@ -33,3 +33,4 @@ import all Jsp000881.TriangleInterval
 public import Jsp000881.PrimeReduction
 import all Jsp000881.PrimeReduction
 public import Jsp000881.InverseReduction
+public import Jsp000881.OriginalProblem

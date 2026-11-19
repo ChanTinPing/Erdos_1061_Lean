@@ -10,7 +10,7 @@ Let $\sigma(n)$ be the sum of the positive divisors of $n$. For a real cutoff $x
 theorem not_linear_asymptotic : ¬ ∃ c : ℝ, 0 < c ∧ S ~[atTop] (fun x : ℝ => c * x)
 ```
 
-The fully qualified theorem is [`Jsp000881.not_linear_asymptotic`](formalization/jsp-000881/compat/UpstreamJspReduction.lean#L44-L49). Its [`S` definition](formalization/jsp-000881/Jsp000881/Reduction.lean#L21-L27) counts the same ordered pairs as the [pinned Formal Conjectures statement](https://github.com/google-deepmind/formal-conjectures/blob/b576d527b271b936f9e61c0e367c302d7386bc80/FormalConjectures/ErdosProblems/1061.lean). The positive lower bounds on both coordinates come from `Finset.Icc 1 ⌊x⌋₊`, and the outer negation answers the existence question for all positive real constants.
+The [submission theorem](formalization/jsp-000881/compat/UpstreamJspReduction.lean) is `Jsp000881.erdos_1061 : ¬ Jsp000881.OriginalQuestion`. Lean checks that the original count and the proof's count `S` agree at every real cutoff. It then transports `Jsp000881.not_linear_asymptotic` to the original question. [Statement correspondence](formalization/jsp-000881/Jsp000881/OriginalProblem.lean) · [Formal Conjectures reference](https://github.com/google-deepmind/formal-conjectures/blob/b576d527b271b936f9e61c0e367c302d7386bc80/FormalConjectures/ErdosProblems/1061.lean)
 
 ## Proof outline and attribution
 

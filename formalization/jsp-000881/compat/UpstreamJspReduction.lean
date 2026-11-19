@@ -1,3 +1,4 @@
+import Jsp000881.OriginalProblem
 import Jsp000881.PrimeReduction
 import UpstreamFixedEstimate
 import UpstreamVerticalDescent
@@ -48,6 +49,10 @@ theorem not_linear_asymptotic : ¬ ∃ c : ℝ, 0 < c ∧ S ~[atTop] (fun x : �
       (fun k _ => PrimeUniformity.native_prime_prepared_typeI_branch k)
       (fun k _ => PrimeUniformity.native_prime_prepared_typeII_branch k))
 
+/-- The negative answer expressed using the original ordered-pair count. -/
+theorem erdos_1061 : ¬ OriginalQuestion :=
+  fun h => not_linear_asymptotic (originalQuestion_iff.mp h)
+
 end Jsp000881
 
 #print axioms Jsp000881.not_linear_asymptotic_of_native_step_descent
@@ -55,3 +60,4 @@ end Jsp000881
 #print axioms Jsp000881.not_linear_asymptotic_of_native_rank_step_descent
 #print axioms Jsp000881.not_linear_asymptotic_of_native_prepared_rank_step_descent
 #print axioms Jsp000881.not_linear_asymptotic
+#print axioms Jsp000881.erdos_1061
